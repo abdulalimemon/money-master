@@ -23,18 +23,22 @@
         <section>
             <div class="container">
                 <h2 class="my-4 text-center text-info fs-1">Money Estimate</h2>
-                <div class="row mb-5 pt-3 gx-5">
+                <!-- Row -->
+                <div class="row mb-5 pt-3">
+                    <!-- Left column - Image -->
                     <div class="col-12 col-lg-6">
                         <img class="img-fluid" src="assets/img.jpg" alt="Image">
                     </div>
+                    <!-- right column - Calculation -->
                     <div class="col-12 col-lg-6 bg-secondary px-4 rounded-2" style="--bs-bg-opacity: .1;">
                         <div>
                             <h3 class="mt-5 text-center text-dark fs-3">Income</h3>
                             <div class="my-3 row d-flex justify-content-evenly align-items-center">
                                 <label class="col-2 col-form-label text-dark fs-4">Income: </label>
                                 <div class="col-10 w-50">
-                                    <input type="text" class="form-control" id="">
+                                    <input type="text" class="form-control" id="income">
                                 </div>
+                                <h4 class="mt-1 text-center text-danger fs-5" id="valid-income"></h4>
                             </div>
                         </div>
                         <div>
@@ -42,28 +46,28 @@
                             <div class="my-3 row d-flex justify-content-evenly align-items-center">
                                 <label class="col-2 col-form-label text-dark fs-4">Food: </label>
                                 <div class="col-10 w-50">
-                                    <input type="text" class="form-control" id="">
+                                    <input type="text" class="form-control" id="food">
                                 </div>
                             </div>
                             <div class="my-3 row d-flex justify-content-evenly align-items-center">
                                 <label class="col-2 col-form-label text-dark fs-4">Rent: </label>
                                 <div class="col-10 w-50">
-                                    <input type="text" class="form-control" id="">
+                                    <input type="text" class="form-control" id="rent">
                                 </div>
                             </div>
                             <div class="my-3 row d-flex justify-content-evenly align-items-center">
                                 <label class="col-2 col-form-label text-dark fs-4">Clothes: </label>
                                 <div class="col-10 w-50">
-                                    <input type="text" class="form-control" id="">
+                                    <input type="text" class="form-control" id="clothes">
                                 </div>
                             </div>
                             <div class="d-flex justify-content-center">
-                                <button class="btn btn-info text-white fs-4 py-1 px-5">Calculate</button>
+                                <button class="btn btn-info text-white fs-4 py-1 px-5" id="calculate">Calculate</button>
                             </div>
                         </div>
                         <div>
-                            <h3 class="mt-4 text-center text-dark fs-3">Total Expenses: <span></span> </h3>
-                            <h3 class="mt-4 text-center text-dark fs-3">Balance: <span></span></h3>
+                            <h3 class="mt-4 text-center text-dark fs-3">Total Expenses: <span id="total-expense"></span> </h3>
+                            <h3 class="mt-4 text-center text-dark fs-3">Balance: <span id="balance"></span></h3>
                         </div>
                         <div>
                             <div class="my-3 row d-flex justify-content-evenly  align-items-center">
@@ -74,7 +78,7 @@
                                 <div class="col-2 col-lg-1">
                                     <span class="ext-dark fs-4 fw-bolder">%</span>
                                 </div>
-                                <div class="col-12 col-lg-4 text-center pt-2">
+                                <div class="col-11 col-lg-4 text-center pt-2">
                                     <button class="btn btn-info text-white fs-4 py-1 px-5">Save</button>
                                 </div>
                             </div>
