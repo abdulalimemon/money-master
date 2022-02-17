@@ -45,7 +45,7 @@ document.getElementById("calculate").addEventListener("click", function () {
 })
 // target save button
 document.getElementById("save-btn").addEventListener("click", function () {
-    // input field
+   // input field
     const income = getMoneyInput("income");
     const food = getMoneyInput("food");
     const rent = getMoneyInput("rent");
@@ -58,7 +58,7 @@ document.getElementById("save-btn").addEventListener("click", function () {
     // calculate remaining Balance
     const remainingBalance = balance - savingAmount;
     // error handling
-    if (save <= 100) {
+    if (save <= 100 && save >= 0) {
         if (balance < savingAmount) {
             document.getElementById("valid-amount").innerText = "You cannot save more than your available balance";
             document.getElementById("saving-amount").innerText = "";
@@ -69,7 +69,7 @@ document.getElementById("save-btn").addEventListener("click", function () {
             document.getElementById("valid-amount").innerText = "";
         }
     } else {
-        document.getElementById("valid-amount").innerText = "You cannot save more than 100%";
+        document.getElementById("valid-amount").innerText = "Input valid number. You cannot save more than 100% and less than 0%";
         document.getElementById("saving-amount").innerText = "";
         document.getElementById("remaining-balance").innerText = "";
     }
