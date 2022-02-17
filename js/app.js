@@ -20,26 +20,19 @@ document.getElementById("calculate").addEventListener("click", function () {
     const totalExpense = food + rent + clothes;
     // target balance and total expense heading
 
-    if (income > 0) {
+    if (income > 0 && food >= 0 && rent >= 0 && clothes >= 0) {
         if (income > totalExpense) {
-            if (food >= 0 || typeof food != "number") {
-                document.getElementById("balance").innerText = balance;
-                document.getElementById("total-expense").innerText = totalExpense;
-                document.getElementById("warning").innerText = "";
-                document.getElementById("valid-income").innerText = "";
-            } else {
-                document.getElementById("valid-amount").innerText = "Input Right amount";
-                document.getElementById("warning").innerText = "";
-                document.getElementById("balance").innerText = "";
-                document.getElementById("warning").innerText = "";
-            }
+            document.getElementById("balance").innerText = balance;
+            document.getElementById("total-expense").innerText = totalExpense;
+            document.getElementById("warning").innerText = "";
+            document.getElementById("valid-income").innerText = "";
         } else {
             document.getElementById("warning").innerText = "You can't spend more than what you earn";
             document.getElementById("balance").innerText = "";
             document.getElementById("total-expense").innerText = "";
             document.getElementById("valid-income").innerText = "";
         }
-    } else {
+    }else {
         document.getElementById("warning").innerText = "";
         document.getElementById("balance").innerText = "";
         document.getElementById("total-expense").innerText = "";
@@ -50,6 +43,13 @@ document.getElementById("calculate").addEventListener("click", function () {
 
 })
 
-
+// if (food >= 0) {
+   
+// } else {
+//     document.getElementById("valid-amount").innerText = "Input Right amount";
+//     document.getElementById("total-expense").innerText = "";
+//     document.getElementById("balance").innerText = "";
+//     document.getElementById("warning").innerText = "";
+// }
 
 
